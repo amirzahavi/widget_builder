@@ -1,0 +1,7 @@
+.preview{
+    position: absolute;
+    display: inline-block;  
+    width: 67%;
+    height: 100%;
+    margin-bottom: 3.5em;     
+}

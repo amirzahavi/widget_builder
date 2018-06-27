@@ -1,0 +1,15 @@
+<aside>
+  <h4>Elements</h4>
+  <div class="elements">
+      <ul>
+        <li *ngFor="let el of elements;let i = index;" 
+        draggable="true" 
+        (dragstart)="OnDrag($event,el)">
+            <span>{{GetType(el.type)}}</span>
+            <img [id]="'el_' + i"  
+              [src]="el.thumbnail" 
+              alt="thumbnail"/>
+        </li>
+      </ul>
+  </div>
+</aside>

@@ -1,0 +1,31 @@
+aside{    
+    display: inline-block;  
+    width: 33%;
+    height: 100%;
+    margin-bottom: 3.5em; 
+    background-color: #b8d1fb;
+}
+
+.elements ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+.elements ul li{    
+    width: 47%;
+    padding: 4px;
+    color: #4286f4;
+    font-weight: bold;
+    text-align: center;
+}
+
+.elements ul li img{
+    width: 100%;    
+    cursor: move;
+    border-radius: 1em;
+}
+
+.elements ul li img:hover{
+    border: black dashed 1px;
+}
