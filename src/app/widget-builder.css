@@ -11,7 +11,11 @@
     margin-bottom: 1em;
   }     
   /*inputs*/        
-  .widget .field input{
+  .widget .field input{    
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
     display: block;
     width: 90%;    
     margin: 0 auto;
@@ -19,8 +23,7 @@
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    background-color: #fff;
-    background-image: none;
+    background-color: #fff;    
     border: 1px solid #ccc;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -29,17 +32,20 @@
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   }
+  .widget .field input[type='email']{
+    background-image: url("../assets/email.svg");
+  }
+  .widget .field input[type='text']{
+    background-image: url("../assets/text.svg");
+  }
+  .widget .field input[type='password']{
+    background-image: url("../assets/password.svg");
+  }
   .widget .field input:valid:not(:placeholder-shown){       
     border-left: green solid 5px;   
   }
   .widget .field input:invalid{       
     border-left: #a51a1a solid 5px;   
-  }
-  .widget .field img{
-    position: relative;
-    left: -2em;
-    float: right;
-    top: -1.8em;
   }
   /* submit button */
   .form-btn button[type="submit"]{

@@ -19,7 +19,6 @@ export class PasswordElement implements Element{
         return `
         <div class='field'>            
             <input id="pass_${index}" type='password' name='password_field' placeholder="enter your password"/>
-            <img src="${this.icon}"/>
         </div>        
         `;
     }

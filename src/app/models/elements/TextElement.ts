@@ -19,7 +19,6 @@ export class TextElement implements Element{
         return `
         <div class="field">            
             <input id="text_${index}" type='text' name='text_field' placeholder="enter your text here"/>
-            <img src="${this.icon}"/>
         </div>
         `;
     }

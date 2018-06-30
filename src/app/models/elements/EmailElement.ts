@@ -18,8 +18,7 @@ export class EmailElement implements Element{
     Write(index: number): string {
         return `
         <div class="field">            
-            <input id="email_${index}" type='email' name='email_field' placeholder="enter your email"/>
-            <img src="${this.icon}"/>
+            <input id="email_${index}" type='email' name='email_field' placeholder="enter your email"/>            
         </div>
         `;
     }
