@@ -5,3 +5,22 @@
     height: 100%;
     margin-bottom: 3.5em;     
 }
+
+.preview .widget_empty_container{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4286f4;
+    font-weight: bold;
+}
+
+.preview .widget_empty_container p{
+    border: #4286f4 dashed 1.5px;
+    padding: 5em;    
+    transition: background-color 0.5s ease-out;
+}
+
+.preview .widget_empty_container p:hover{
+    background-color: #b8d1fb;
+}

@@ -23,13 +23,15 @@ export class PreviewComponent implements OnInit {
   }  
 
   allowDrop($event: Event){
-    $event.preventDefault();
+    if($event.target instanceof HTMLParagraphElement){ 
+      $event.preventDefault();
+    }
   }
 
-  drop($event){
+  drop($event){   
     $event.preventDefault();
     var elementType : number = +$event.dataTransfer.getData("type");    
-    this.elements.addElement(elementType);
+    this.elements.addElement(elementType);    
   }
 
   private BuildWidget(els: Element[]){
