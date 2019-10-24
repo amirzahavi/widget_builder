@@ -4,6 +4,7 @@
             <li class="logo"><a href="/"><img [src]="logo" alt="logo"></a></li>
         </ul>
         <ul class="right">
+            <li class="profile" *ngIf="user$ | async as user">{{user.username}}</li>
         </ul>
     </nav>
 </div>

@@ -1,0 +1,14 @@
+<div class="content" *ngIf="widget$ | async as widget">
+    <div class="sub-menu">
+        <h2>{{widget.name}}</h2>
+        <div class="actions">
+            <a [routerLink]="['/widgets']"><img src="assets/cancel.svg" alt="cancel"/></a>
+            <a (click)="save(widget)"><img src="assets/save.svg" alt="cancel"/></a>
+        </div>        
+    </div>
+    
+    <div class="continer">
+        <app-elements></app-elements>
+        <app-preview [widgetId]="widget.id"></app-preview>
+    </div>    
+</div>

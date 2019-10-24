@@ -1,8 +1,27 @@
-<div id="preview" class="preview" (dragover)="allowDrop($event)" (drop)="drop($event)">
-  <h4>Widget Preview</h4>
-  <div *ngIf="widget == ''" class="widget_empty_container">
-    <p>Drag Elements here...</p>
-  </div>
-  <div *ngIf="widget != ''" class="widget_container" [innerHTML]="widget | safeHtml">    
-  </div>
+<h4>Widget Preview</h4>
+<div class="widget_container"      
+    (dragover)="allowDrop($event)" 
+    (drop)="drop($event)">
+    <div *ngIf="widget" [innerHTML]="widget | safeHtml"></div>
+    <div *ngIf="!widget" class="empty">Drag Elements Here</div>  
 </div>
+<app-modal class="modal" id="element-settings" [backgroundClose]="false">
+    <h4>Element Settings</h4>
+    <form #loginForm="ngForm" (ngSubmit)="setElement()">
+        <div class="row">
+            <label for="name">Name</label>
+            <input type="text" name="name" [(ngModel)]="settings.name" value="">
+        </div>
+        <div class="row">
+                <label for="trigger">Script Trigger</label>
+                <select name="trigger" [(ngModel)]="settings.trigger">
+                    <option *ngFor="let item of triggers" [value]="item.value">{{item.name}}</option>
+                </select>
+            </div>
+        <div class="row">
+            <label for="script">Script</label>
+            <input type="text" name="script" [(ngModel)]="settings.script"  value="">
+        </div>
+        <input type="submit" value="OK">
+    </form>
+</app-modal>

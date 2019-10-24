@@ -1,0 +1,4 @@
+<div 
+    [class]="notification && notification.error ? 'error': 'info'"
+    [ngStyle]="{'opacity': show ? 1 : 0}"
+>{{notification && notification.message}}</div>

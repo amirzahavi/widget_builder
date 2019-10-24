@@ -1,10 +1,10 @@
-enum BehaviorTrigger{
+export enum BehaviorTrigger {
     Click,
     Blur,
     Focus,
 }
 
-export class Behavior{
+export class Behavior {
     script: string;
     trigger: BehaviorTrigger;
 }

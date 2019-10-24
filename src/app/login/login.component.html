@@ -1,0 +1,13 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" required [(ngModel)]="model.username">        
+    </div> 
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" required  [(ngModel)]="model.password">
+    </div>
+    <input type="submit" value="Login">
+    <div *ngIf="loginError$ | async as error">{{ error }}</div>
+</form>
+

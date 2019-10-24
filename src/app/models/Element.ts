@@ -1,6 +1,6 @@
-import { Behavior } from "./Behavior";
+import { Behavior } from './Behavior';
 
-export enum ElementType{
+export enum ElementType {
     Text,
     Email,
     Password,

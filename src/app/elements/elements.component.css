@@ -1,20 +1,19 @@
-aside{    
-    display: inline-block;  
+:host {
     width: 33%;
     height: 100%;
-    margin-bottom: 3.5em; 
     background-color: #b8d1fb;
+}
+h4 {
+    text-align: center;
 }
 
 .elements ul{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
+    flex-direction: column;
 }
 
-.elements ul li{    
-    width: 47%;
-    padding: 4px;
+.elements ul li{   
+    padding: 0 0.5rem;
     color: #4286f4;
     font-weight: bold;
     text-align: center;

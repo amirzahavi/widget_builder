@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Element, ElementType  } from "../models/Element";
-import { ElementsService  } from "../elements.service";
+import { ElementsService  } from "./elements.service";
 
 @Component({
   selector: 'app-elements',
@@ -19,11 +19,11 @@ export class ElementsComponent implements OnInit {
     this.elementService.getElements().subscribe(el => this.elements = el);
   }
 
-  GetType(type: ElementType): string{
+  GetType(type: ElementType): string {
     return ElementType[type];
   }
 
-  OnDrag($event, el: Element){
-    $event.dataTransfer.setData("type", el.type);
+  OnDrag($event, el: Element) {
+    $event.dataTransfer.setData('type', el.type);
   }
 }

@@ -1,0 +1,39 @@
+.sub-menu {
+    display: flex;
+    justify-content: flex-end;
+    height: 3rem;
+    background-color: #3469bf;
+    color: white;
+}
+
+.actions {
+    width: 50%;
+    display: flex;    
+    justify-content: flex-end;    
+}
+
+.actions a {
+    display: flex;
+    width: 3rem;
+    justify-content: center;
+    transition: background-color ease-out 0.5s;
+    cursor: pointer;
+}
+
+.actions a:hover {
+    background-color: #4286f4
+}
+
+h2 {    
+    margin: 0;
+    padding: 0.5rem 0;    
+}
+
+.content {
+    height: calc(100vh - 3rem - 2.5rem);
+}
+
+.continer {
+    display: flex;
+    height: calc(100% - 3rem);
+}

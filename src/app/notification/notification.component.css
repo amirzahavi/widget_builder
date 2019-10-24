@@ -1,0 +1,21 @@
+div {
+    max-width: 25vw;
+    width: 15vw;
+    border-radius: 6px;
+    padding: 0.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 6px 0 black;
+    transition: opacity ease-in-out 1s;
+}
+
+div.error {
+    background: crimson;
+}
+
+div.info {
+    background: green;
+}

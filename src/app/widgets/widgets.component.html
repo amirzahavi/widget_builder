@@ -1,0 +1,4 @@
+<h1>My Widgets</h1>
+<div class="widgets" *ngIf="widgets$ | async as widgets">
+    <app-widget-card *ngFor="let widget of widgets" [widget]="widget"></app-widget-card>
+</div>
